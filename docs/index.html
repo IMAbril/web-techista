@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Metadatos de la página -->
+  <title id="meta-title">Reparación de Techos e Impermeabilizaciones en [TU ZONA] | [NOMBRE DEL NEGOCIO]</title>
+  <meta
+    id="meta-description"
+    name="description"
+    content="Servicios integrales de reparación de techos, impermeabilización con membrana, recambio de chapas y zinguería a medida en [TU ZONA / LOCALIDADES]. Trabajos profesionales con garantía escrita. Presupuesto sin cargo."
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0D1E2E" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- Tipografía arquitectónica y de alta legibilidad: Albert Sans + Work Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@600;700;800&family=Work+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS vía CDN configurado con la paleta de Techos RGM -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rgm: {
+              DEFAULT: '#ee823a',
+              hover: '#d96d24',
+              light: '#fff5ee',
+              dark: '#14171c',
+              charcoal: '#1c222b',
+              gray: '#7e7d7d',
+              border: '#e5e7eb',
+              bgLight: '#f8f9fa'
+            },
+            whatsapp: {
+              DEFAULT: '#25d366',
+              hover: '#1fb855'
+            }
+          },
+          fontFamily: {
+            sans: ['"Work Sans"', 'system-ui', 'sans-serif'],
+            heading: ['"Albert Sans"', '"Work Sans"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Schema.org estructurado para contratista de techos -->
+  <script id="schema-roofing" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    "name": "[NOMBRE DEL NEGOCIO / TU APELLIDO]",
+    "description": "Servicios integrales de reparación de techos, impermeabilización y zinguería a medida en [TU ZONA / LOCALIDADES] con garantía escrita.",
+    "telephone": "+5491100000000",
+    "url": "https://tudominio-ejemplo.com.ar",
+    "areaServed": {
+      "@type": "Place",
+      "name": "[TU ZONA / LOCALIDADES]"
+    },
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "07:30",
+        "closes": "19:30"
+      }
+    ],
+    "knowsAbout": [
+      "Reparación de goteras y filtraciones",
+      "Techos de chapa Ternium Cincalum",
+      "Impermeabilización de losas y membranas Sika / Weber",
+      "Zinguería a medida, babetas y canaletas",
+      "Techos de tejas y pérgolas"
+    ]
+  }
+  </script>
+
+  <style>
+    /* Escala tipográfica explícita y robusta */
+    body { font-size: 16px; line-height: 1.6; font-family: 'Work Sans', sans-serif; color: #374151; }
+    h1 { font-family: 'Albert Sans', sans-serif; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.15; font-weight: 800; }
+    h2 { font-family: 'Albert Sans', sans-serif; font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.25; font-weight: 800; }
+    h3 { font-family: 'Albert Sans', sans-serif; font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.35; font-weight: 700; }
+
+    html {
+      scroll-behavior: smooth;
+      scrollbar-gutter: stable;
+    }
+
+    /* Animación del calculador */
+    .step-fade {
+      animation: fadeStep 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes fadeStep {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Sombras suaves estilo Techos RGM */
+    .rgm-shadow {
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+    }
+    .rgm-shadow-hero {
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-rgm selection:text-white">
+
+  <!-- ======================================================================= -->
+  <!-- 1. ENCABEZADO FIJO Y NAVEGACIÓN (LOGO, NOMBRE, SOBRE NOSOTROS, TRABAJOS, FAQ) -->
+  <!-- ======================================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200/90 shadow-xs transition-all duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-4">
+      <!-- Logo y Nombre del Negocio -->
+      <a href="#inicio" class="flex items-center gap-2.5 sm:gap-3 min-w-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-rgm rounded-lg" aria-label="Ir al inicio de la página">
+        <img
+          src="img/logo-techista-web-light.png"
+          alt="Logotipo de la empresa de techos"
+          class="h-9 sm:h-11 w-auto max-w-[140px] xs:max-w-[170px] sm:max-w-[210px] object-contain shrink-0 group-hover:opacity-90 transition"
+          width="276"
+          height="120"
+        />
+        <div class="truncate border-l border-gray-200 pl-2.5 sm:pl-3 leading-snug">
+          <span data-dato="nombre-corto" class="block font-heading font-extrabold text-sm sm:text-base tracking-tight text-rgm-dark truncate">
+            [NOMBRE DEL NEGOCIO]
+          </span>
+          <span class="text-xs text-gray-500 font-normal truncate hidden sm:block">
+            Reparación de Techos & Zinguería
+          </span>
+        </div>
+      </a>
+
+      <!-- Navegación de Escritorio: Solo Sobre nosotros, Trabajos y FAQ -->
+      <nav class="hidden md:flex items-center gap-2 lg:gap-3 text-sm font-semibold text-gray-700" aria-label="Navegación principal">
+        <a href="#sobre-nosotros" class="px-3.5 py-2 rounded-lg hover:text-rgm hover:bg-gray-100/70 transition">Sobre nosotros</a>
+        <a href="#trabajos" class="px-3.5 py-2 rounded-lg hover:text-rgm hover:bg-gray-100/70 transition">Trabajos</a>
+        <a href="#faq" class="px-3.5 py-2 rounded-lg hover:text-rgm hover:bg-gray-100/70 transition">FAQ</a>
+      </nav>
+
+      <!-- Botón Menú Hamburguesa (Mobile / Tablet < md) -->
+      <button
+        id="btn-abrir-menu"
+        type="button"
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 bg-white text-gray-700 hover:text-rgm hover:bg-gray-50 active:scale-95 transition focus:outline-none focus:ring-2 focus:ring-rgm"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="menu-lateral-mobile"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================================= -->
+  <!-- NAVEGACIÓN MÓVIL DESLIZABLE (OFF-CANVAS DRAWER ACCESIBLE)               -->
+  <!-- ======================================================================= -->
+  <div
+    id="backdrop-menu-mobile"
+    class="fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out md:hidden"
+    aria-hidden="true"
+  ></div>
+
+  <aside
+    id="menu-lateral-mobile"
+    class="fixed top-0 right-0 bottom-0 w-[80%] max-w-xs bg-white z-50 flex flex-col shadow-2xl translate-x-full transition-transform duration-300 ease-out md:hidden"
+    aria-label="Menú de navegación para dispositivos móviles"
+    aria-hidden="true"
+    tabindex="-1"
+  >
+    <!-- Cabecera del Menú Mobile -->
+    <div class="p-4 border-b border-gray-100 flex items-center justify-between gap-3 bg-gray-50/70">
+      <div class="flex items-center gap-2 min-w-0">
+        <img
+          src="img/logo-techista-web-light.png"
+          alt="Logo"
+          class="h-7 w-auto object-contain"
+          width="276"
+          height="120"
+        />
+        <span data-dato="nombre-corto" class="font-heading font-extrabold text-xs text-rgm-dark truncate">
+          [NOMBRE DEL NEGOCIO]
+        </span>
+      </div>
+      <button
+        id="btn-cerrar-menu"
+        type="button"
+        class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-500 hover:text-gray-900 hover:bg-gray-200/60 active:scale-95 transition focus:outline-none focus:ring-2 focus:ring-rgm"
+        aria-label="Cerrar menú de navegación"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Enlaces Táctiles de Navegación: Solo Sobre nosotros, Trabajos y FAQ -->
+    <nav class="flex-1 overflow-y-auto px-4 py-6 space-y-2" aria-label="Enlaces móviles">
+      <a
+        href="#sobre-nosotros"
+        class="enlace-menu-mobile flex items-center justify-between px-4 py-3.5 rounded-xl text-gray-800 hover:bg-gray-100 hover:text-rgm font-semibold text-base transition"
+      >
+        <span>Sobre nosotros</span>
+        <svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a
+        href="#trabajos"
+        class="enlace-menu-mobile flex items-center justify-between px-4 py-3.5 rounded-xl text-gray-800 hover:bg-gray-100 hover:text-rgm font-semibold text-base transition"
+      >
+        <span>Trabajos</span>
+        <svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a
+        href="#faq"
+        class="enlace-menu-mobile flex items-center justify-between px-4 py-3.5 rounded-xl text-gray-800 hover:bg-gray-100 hover:text-rgm font-semibold text-base transition"
+      >
+        <span>FAQ</span>
+        <svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </nav>
+  </aside>
+
+  <main id="inicio">
+    <!-- ===================================================================== -->
+    <!-- 2. HERO PRINCIPAL ESTILO TECHOS RGM (FOTO COMPLETA + OVERLAY OSCURO)  -->
+    <!-- ===================================================================== -->
+    <section class="relative min-h-[580px] lg:min-h-[640px] flex items-center bg-rgm-dark text-white overflow-hidden">
+      <!-- Imagen de fondo con overlay cinematográfico idéntico a Techos RGM -->
+      <img
+        src="img/hero-techista.jpg"
+        alt="Reparación de techos e impermeabilizaciones"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <!-- Capa de oscurecimiento profundo para máxima legibilidad -->
+      <div class="absolute inset-0 bg-gradient-to-r from-rgm-dark/95 via-rgm-dark/85 to-rgm-dark/60"></div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-20 w-full">
+        <div class="max-w-3xl">
+          <!-- Subtítulo de zona estilo RGM (letras espaciadas en naranja) -->
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-rgm mb-4">
+            <span data-dato="zona-larga">[TU ZONA / LOCALIDADES]</span>
+          </p>
+
+          <!-- Título principal estilo Techos RGM -->
+          <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight text-white mb-5">
+            Reparación de Techos, Impermeabilizaciones y Zinguería en
+            <span data-dato="zona-corta" class="text-rgm">[TU ZONA]</span>
+          </h1>
+
+          <!-- Bajada de servicios integrales -->
+          <p class="text-base sm:text-xl text-gray-200 leading-relaxed font-normal mb-8 max-w-2xl">
+            Servicios integrales de mantenimiento: recambio de chapas, colocación experta de membranas, babetas amuradas y solución definitiva a goteras con garantía escrita de <span data-dato="garantia" class="text-white font-semibold">[X] años</span>.
+          </p>
+
+          <!-- Botones de acción estilo RGM -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+            <a
+              href="https://wa.me/5491100000000"
+              data-link="whatsapp-urgencia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-3 bg-rgm hover:bg-rgm-hover text-white text-base font-bold px-8 py-4 rounded-md shadow-lg transition"
+            >
+              <svg class="w-5 h-5 shrink-0 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.95L0 24l6.33-1.66a11.86 11.86 0 005.72 1.46h.01c6.55 0 11.89-5.34 11.9-11.9 0-3.18-1.24-6.17-3.44-8.42zM12.06 21.8h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.85 9.85 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.83 9.83 0 012.89 6.99c0 5.45-4.44 9.9-9.89 9.9zm5.42-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+              </svg>
+              <span>Contactar por WhatsApp</span>
+            </a>
+
+            <a
+              href="#presupuesto-rapido"
+              class="inline-flex items-center justify-center gap-2 border border-white/40 hover:border-white text-white text-base font-semibold px-7 py-4 rounded-md transition"
+            >
+              <span>Presupuesto en 3 Pasos</span>
+            </a>
+          </div>
+
+          <!-- Puntos destacados rápidos -->
+          <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm text-gray-300 pt-6 border-t border-white/10">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-rgm"></span>
+              <span>Visita y diagnóstico sin cargo</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-rgm"></span>
+              <span>Garantía escrita por contrato</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-rgm"></span>
+              <span>Materiales certificados Ternium & Sika</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. SECCIÓN QUIÉNES SOMOS / ¿POR QUÉ ELEGIRNOS? (ESTRUCTURA RGM)       -->
+    <!-- ===================================================================== -->
+    <section id="sobre-nosotros" class="py-16 sm:py-24 bg-white border-b border-gray-200">
+      <div id="quienes-somos" class="sr-only"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+          <!-- Columna Izquierda: Introducción y Manifiesto de Oficio -->
+          <div class="md:col-span-5 md:pr-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-rgm mb-2">Sobre Nosotros</p>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-rgm-dark leading-tight mb-5">
+              ¿Por qué elegirnos?
+            </h2>
+            <div class="text-gray-600 text-base leading-relaxed space-y-4">
+              <p>
+                Contamos con una sólida trayectoria en el rubro de los techos y la zinguería en <strong data-dato="zona-larga" class="text-rgm-dark font-semibold">[TU ZONA / LOCALIDADES]</strong>. Cada proyecto que encaramos está respaldado por años de experiencia técnica y un compromiso riguroso con la seguridad estructural y la estanqueidad.
+              </p>
+              <p>
+                No realizamos parches precarios ni soluciones temporales; brindamos la tranquilidad de saber que su propiedad está protegida por una cubierta diseñada para perdurar ante cualquier temporal, ejecutada por manos expertas que cuidan cada detalle del proceso.
+              </p>
+            </div>
+          </div>
+
+          <!-- Columna Derecha con divisor vertical estilo Techos RGM (Checklist con iconos naranjas) -->
+          <div class="md:col-span-7 md:border-l md:border-gray-200 md:pl-10">
+            <ul class="space-y-6">
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-rgm/10 text-rgm flex items-center justify-center shrink-0">
+                  <!-- Ícono Experiencia Certificada -->
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.004 0V5.625c0-.621-.504-1.125-1.125-1.125h-2.25c-.621 0-1.125.504-1.125 1.125v6.75m6.75 0H7.5" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="block text-rgm-dark font-bold text-base mb-1">Experiencia y Oficio Especializado</strong>
+                  <span class="text-gray-600 text-sm leading-relaxed">
+                    Resolvemos desde filtraciones en babetas y goteras complejas hasta techos nuevos de chapa y losas de gran superficie con solvencia y rapidez.
+                  </span>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-rgm/10 text-rgm flex items-center justify-center shrink-0">
+                  <!-- Ícono Cumplimiento y Garantía -->
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="block text-rgm-dark font-bold text-base mb-1">Cumplimiento y Garantía Escrita</strong>
+                  <span class="text-gray-600 text-sm leading-relaxed">
+                    Respaldo firmado por contrato por cada obra realizada. Si surge cualquier inconveniente en el sector intervenido, respondemos de inmediato.
+                  </span>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-rgm/10 text-rgm flex items-center justify-center shrink-0">
+                  <!-- Ícono Asesoramiento Técnico -->
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.07a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091.491.077 1.01-.042 1.499" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="block text-rgm-dark font-bold text-base mb-1">Materiales de Alto Rendimiento</strong>
+                  <span class="text-gray-600 text-sm leading-relaxed">
+                    Trabajamos exclusivamente con chapas <strong>Ternium Cincalum calibre 25</strong>, membranas <strong>Weber Megaflex</strong> y selladores poliuretánicos <strong>Sika</strong>.
+                  </span>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-rgm/10 text-rgm flex items-center justify-center shrink-0">
+                  <!-- Ícono Atención Inmediata -->
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="block text-rgm-dark font-bold text-base mb-1">Diagnóstico en el Día Sin Cargo</strong>
+                  <span class="text-gray-600 text-sm leading-relaxed">
+                    Subimos a revisar el techo, identificamos el punto de ingreso del agua y presupuestamos con honestidad sin cobrar la visita de inspección.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. SERVICIOS INTEGRALES ESTILO TECHOS RGM (TARJETAS .01, .02, .03)    -->
+    <!-- ===================================================================== -->
+    <section id="servicios" class="py-16 sm:py-24 bg-rgm-bgLight border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-rgm mb-2">Nuestros Servicios</p>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-rgm-dark leading-tight">
+            Soluciones integrales de mantenimiento y construcción
+          </h2>
+          <p class="text-gray-600 mt-3 text-base">
+            Cada trabajo se realiza cumpliendo normas de seguridad, utilizando materiales de primera calidad y dejando la obra limpia y verificada.
+          </p>
+        </div>
+
+        <!-- Grilla de Servicios estilo Techos RGM -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Servicio 1: Reparación Integral -->
+          <article class="bg-white rounded-lg border border-gray-200 overflow-hidden rgm-shadow flex flex-col group">
+            <div class="h-64 sm:h-72 overflow-hidden relative bg-gray-100">
+              <img
+                src="img/obra1-despues.jpg"
+                alt="Reparación integral de techos de chapa"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                loading="lazy"
+              />
+              <span class="absolute top-4 right-4 bg-rgm-dark/85 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded">
+                .01
+              </span>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-rgm-dark mb-3">
+                  Reparación Integral de Techos
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                  Detectamos y solucionamos de raíz cualquier gotera o filtración en su propiedad. Desmonte de chapas picadas, reemplazo de fijaciones por tornillos con arandela de neopreno y sellado de babetas amuradas a la mampostería.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-rgm">
+                <span>Chapa Cincalum · Aislación hidrófuga</span>
+                <span>→</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 2: Impermeabilización -->
+          <article class="bg-white rounded-lg border border-gray-200 overflow-hidden rgm-shadow flex flex-col group">
+            <div class="h-64 sm:h-72 overflow-hidden relative bg-gray-100">
+              <img
+                src="img/obra2-despues.jpg"
+                alt="Impermeabilización de losas y terrazas con membrana asfáltica"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                loading="lazy"
+              />
+              <span class="absolute top-4 right-4 bg-rgm-dark/85 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded">
+                .02
+              </span>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-rgm-dark mb-3">
+                  Impermeabilización con Membrana
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                  Protegemos sus losas y terrazas mediante la colocación experta de membranas asfálticas tradicionales de 4mm termoselladas a soplete con aluminio flexible, imprimación completa y recubrimientos poliuretánicos de alta tecnología.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-rgm">
+                <span>Weber Megaflex · Sika · Geotextil</span>
+                <span>→</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 3: Zinguería y Canaletas -->
+          <article class="bg-white rounded-lg border border-gray-200 overflow-hidden rgm-shadow flex flex-col group">
+            <div class="h-64 sm:h-72 overflow-hidden relative bg-gray-100">
+              <img
+                src="img/obra3-despues.jpg"
+                alt="Zinguería a medida y colocación de canaletas"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                loading="lazy"
+              />
+              <span class="absolute top-4 right-4 bg-rgm-dark/85 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded">
+                .03
+              </span>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-rgm-dark mb-3">
+                  Zinguería a Medida y Canaletas
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                  Fabricación y colocación de canaletas galvanizadas de alto caudal, babetas de sobrechapa embutidas con amoladora, cumbreras, cenefas y bajadas pluviales calculadas para evacuar rápidamente grandes volúmenes de agua.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-rgm">
+                <span>Chapa galvanizada · Plegado a medida</span>
+                <span>→</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 4: Reformas y Estructuras -->
+          <article class="bg-white rounded-lg border border-gray-200 overflow-hidden rgm-shadow flex flex-col group">
+            <div class="h-64 sm:h-72 overflow-hidden relative bg-gray-100">
+              <img
+                src="img/hero-techista.jpg"
+                alt="Construcción y reforma de estructuras de techos"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                loading="lazy"
+              />
+              <span class="absolute top-4 right-4 bg-rgm-dark/85 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded">
+                .04
+              </span>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-rgm-dark mb-3">
+                  Techos Nuevos, Tejas y Pérgolas
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                  Desarrollamos proyectos de obra nueva y ampliaciones residenciales o comerciales. Montaje de estructuras metálicas o de madera, recambio integral de tejas coloniales y francesas, y construcción de pérgolas funcionales.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-rgm">
+                <span>Estructuras · Quinchos · Tejas</span>
+                <span>→</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. OBRAS REALES: ANTES Y DESPUÉS (FOTOGRAFÍAS REALES)                 -->
+    <!-- ===================================================================== -->
+    <section id="trabajos" class="py-16 sm:py-24 bg-white border-b border-gray-200">
+      <div id="trabajos-reales" class="sr-only"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-rgm mb-2">Casos Reales</p>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-rgm-dark leading-tight">
+              Trabajos terminados: el antes y el después
+            </h2>
+            <p class="text-gray-600 text-sm sm:text-base mt-2 max-w-xl">
+              Cada techo se entrega limpio de virutas, con fijaciones alineadas y probado antes de emitir la garantía escrita.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Obra 1 -->
+          <article class="bg-white rounded-lg border border-gray-200 overflow-hidden rgm-shadow flex flex-col">
+            <div class="grid grid-cols-2 h-52 sm:h-56 border-b border-gray-200 relative bg-gray-900">
+              <div class="relative overflow-hidden group">
+                <img src="img/obra1-antes.jpg" alt="Antes: Chapa oxidada" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" loading="lazy" />
+                <span class="absolute top-2.5 left-2.5 bg-red-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded shadow">Antes</span>
+              </div>
+              <div class="relative overflow-hidden group">
+                <img src="img/obra1-despues.jpg" alt="Después: Chapa Cincalum nueva" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" loading="lazy" />
+                <span class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded shadow">Después</span>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-bold text-rgm uppercase tracking-wider">Recambio de Chapa</span>
+                <h3 class="font-heading font-bold text-lg text-rgm-dark mt-1 mb-2">Desmonte de chapa picada y cubierta Cincalum</h3>
+                <p class="text-sm text-gray-600">Retiro de chapas oxidadas, colocación de aislación hidrófuga doble burbuja y babetas galvanizadas amuradas.</p>
+              </div>
+              <p class="text-xs text-gray-400 mt-4 pt-3 border-t border-gray-100">📍 Obra en <span data-dato="zona-corta">[TU ZONA]</span></p>
+            </div>
+          </article>
+
+          <!-- Obra 2 -->
+          <article class="bg-white rounded-lg border border-gray-200 overflow-hidden rgm-shadow flex flex-col">
+            <div class="grid grid-cols-2 h-52 sm:h-56 border-b border-gray-200 relative bg-gray-900">
+              <div class="relative overflow-hidden group">
+                <img src="img/obra2-antes.jpg" alt="Antes: Membrana rota y losa con filtración" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" loading="lazy" />
+                <span class="absolute top-2.5 left-2.5 bg-red-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded shadow">Antes</span>
+              </div>
+              <div class="relative overflow-hidden group">
+                <img src="img/obra2-despues.jpg" alt="Después: Membrana termosellada" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" loading="lazy" />
+                <span class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded shadow">Después</span>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-bold text-rgm uppercase tracking-wider">Impermeabilización de Losa</span>
+                <h3 class="font-heading font-bold text-lg text-rgm-dark mt-1 mb-2">Retiro de membrana vieja y sellado completo</h3>
+                <p class="text-sm text-gray-600">Limpieza profunda, corrección de caídas hacia embudos y colocación a soplete de membrana de 4mm con aluminio flexible.</p>
+              </div>
+              <p class="text-xs text-gray-400 mt-4 pt-3 border-t border-gray-100">📍 Obra en <span data-dato="zona-corta">[TU ZONA]</span></p>
+            </div>
+          </article>
+
+          <!-- Obra 3 -->
+          <article class="bg-white rounded-lg border border-gray-200 overflow-hidden rgm-shadow flex flex-col">
+            <div class="grid grid-cols-2 h-52 sm:h-56 border-b border-gray-200 relative bg-gray-900">
+              <div class="relative overflow-hidden group">
+                <img src="img/obra3-antes.jpg" alt="Antes: Canaleta picada" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" loading="lazy" />
+                <span class="absolute top-2.5 left-2.5 bg-red-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded shadow">Antes</span>
+              </div>
+              <div class="relative overflow-hidden group">
+                <img src="img/obra3-despues.jpg" alt="Después: Zinguería y canaleta nueva" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" loading="lazy" />
+                <span class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded shadow">Después</span>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-bold text-rgm uppercase tracking-wider">Zinguería y Canaletas</span>
+                <h3 class="font-heading font-bold text-lg text-rgm-dark mt-1 mb-2">Canaleta galvanizada de alto caudal</h3>
+                <p class="text-sm text-gray-600">Plegado a medida en chapa galvanizada, colocación de bajadas pluviales y sellado estanco con poliuretano Sika.</p>
+              </div>
+              <p class="text-xs text-gray-400 mt-4 pt-3 border-t border-gray-100">📍 Obra en <span data-dato="zona-corta">[TU ZONA]</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. CALCULADOR EN 3 PASOS (INTEGRADO CON ESTILO LIMPIO Y RÁPIDO)       -->
+    <!-- ===================================================================== -->
+    <section id="presupuesto-rapido" class="py-16 sm:py-24 bg-rgm-bgLight border-b border-gray-200">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <p class="text-xs font-bold uppercase tracking-widest text-rgm mb-2">Presupuesto Online Sin Cargo</p>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-rgm-dark tracking-tight">
+            Cotizá tu trabajo o reparación en 3 toques
+          </h2>
+          <p class="text-gray-600 mt-2.5 text-base">
+            Seleccioná tu caso y te armamos el mensaje ordenado para responderte al instante por WhatsApp.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl rgm-shadow border border-gray-200 overflow-hidden">
+          <!-- Barra superior del calculador -->
+          <div class="bg-rgm-dark px-6 py-4 text-white">
+            <div class="flex items-center justify-between text-xs sm:text-sm font-semibold mb-2">
+              <span id="indicador-paso-texto">Paso 1 de 3: ¿Qué necesitás resolver?</span>
+              <span id="indicador-porcentaje" class="text-rgm font-bold">33%</span>
+            </div>
+            <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+              <div id="barra-progreso" class="h-full bg-rgm transition-all duration-300 rounded-full" style="width: 33%;"></div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8">
+            <!-- PASO 1 -->
+            <div id="paso-1" class="step-fade">
+              <h3 class="font-heading font-bold text-lg sm:text-xl text-rgm-dark mb-2">
+                1. ¿Qué trabajo necesitás en el techo?
+              </h3>
+              <p class="text-sm text-gray-500 mb-6">Tocá la opción que mejor describa tu problema:</p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <button
+                  type="button"
+                  data-problema="Gotera o Filtración Urgente"
+                  class="btn-paso-1 group text-left p-4 sm:p-5 rounded-lg border border-gray-200 hover:border-rgm hover:bg-rgm-light transition flex items-start gap-4 focus:outline-none focus:ring-2 focus:ring-rgm"
+                >
+                  <div class="w-10 h-10 rounded-md bg-rgm/10 text-rgm flex items-center justify-center shrink-0 group-hover:bg-rgm group-hover:text-white transition">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-rgm-dark text-base">Gotera o Filtración Urgente</span>
+                    <span class="block text-xs text-gray-500 mt-1">Entra agua por lluvia, manchas en cielorraso o babetas sueltas.</span>
+                  </div>
+                </button>
+
+                <button
+                  type="button"
+                  data-problema="Cambio o Techo Nuevo de Chapa/Teja"
+                  class="btn-paso-1 group text-left p-4 sm:p-5 rounded-lg border border-gray-200 hover:border-rgm hover:bg-rgm-light transition flex items-start gap-4 focus:outline-none focus:ring-2 focus:ring-rgm"
+                >
+                  <div class="w-10 h-10 rounded-md bg-rgm/10 text-rgm flex items-center justify-center shrink-0 group-hover:bg-rgm group-hover:text-white transition">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-rgm-dark text-base">Techo Nuevo o Recambio de Chapa</span>
+                    <span class="block text-xs text-gray-500 mt-1">Chapas picadas, tirantes, quincho o ampliación nueva.</span>
+                  </div>
+                </button>
+
+                <button
+                  type="button"
+                  data-problema="Impermeabilización / Membrana"
+                  class="btn-paso-1 group text-left p-4 sm:p-5 rounded-lg border border-gray-200 hover:border-rgm hover:bg-rgm-light transition flex items-start gap-4 focus:outline-none focus:ring-2 focus:ring-rgm"
+                >
+                  <div class="w-10 h-10 rounded-md bg-rgm/10 text-rgm flex items-center justify-center shrink-0 group-hover:bg-rgm group-hover:text-white transition">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-rgm-dark text-base">Impermeabilización / Membrana</span>
+                    <span class="block text-xs text-gray-500 mt-1">Membrana asfáltica de 4mm, geotextil o líquida en losa y terraza.</span>
+                  </div>
+                </button>
+
+                <button
+                  type="button"
+                  data-problema="Zinguería y Canaletas"
+                  class="btn-paso-1 group text-left p-4 sm:p-5 rounded-lg border border-gray-200 hover:border-rgm hover:bg-rgm-light transition flex items-start gap-4 focus:outline-none focus:ring-2 focus:ring-rgm"
+                >
+                  <div class="w-10 h-10 rounded-md bg-rgm/10 text-rgm flex items-center justify-center shrink-0 group-hover:bg-rgm group-hover:text-white transition">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.07a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091.491.077 1.01-.042 1.499" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-rgm-dark text-base">Zinguería y Canaletas</span>
+                    <span class="block text-xs text-gray-500 mt-1">Babetas amuradas, cumbreras y canaletas de alto caudal.</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- PASO 2 -->
+            <div id="paso-2" class="hidden step-fade">
+              <div class="flex items-center justify-between mb-4">
+                <button
+                  type="button"
+                  id="volver-a-1"
+                  class="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-600 hover:text-rgm transition"
+                >
+                  ← Volver al paso anterior
+                </button>
+                <span id="badge-eleccion-1" class="text-xs font-semibold bg-gray-100 text-rgm-dark px-2.5 py-1 rounded"></span>
+              </div>
+
+              <h3 class="font-heading font-bold text-lg sm:text-xl text-rgm-dark mb-3">
+                2. Tipo de propiedad y qué tan urgente es
+              </h3>
+
+              <div class="mb-6">
+                <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">
+                  ¿Dónde hay que realizar el trabajo?
+                </label>
+                <div class="grid grid-cols-3 gap-2 sm:gap-3" role="group">
+                  <button type="button" data-propiedad="Casa particular" class="btn-propiedad py-2.5 px-3 rounded-md border-2 border-rgm-dark bg-rgm-dark text-white font-semibold text-xs sm:text-sm transition">
+                    Casa particular
+                  </button>
+                  <button type="button" data-propiedad="PH / Terraza / Edificio" class="btn-propiedad py-2.5 px-3 rounded-md border border-gray-300 bg-white text-gray-700 hover:border-rgm font-semibold text-xs sm:text-sm transition">
+                    PH / Terraza
+                  </button>
+                  <button type="button" data-propiedad="Galpón / Comercio" class="btn-propiedad py-2.5 px-3 rounded-md border border-gray-300 bg-white text-gray-700 hover:border-rgm font-semibold text-xs sm:text-sm transition">
+                    Galpón / Local
+                  </button>
+                </div>
+              </div>
+
+              <p class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2.5">
+                ¿Cuándo necesitás resolverlo?
+              </p>
+              <div class="space-y-3">
+                <button
+                  type="button"
+                  data-urgencia="Es una urgencia por lluvia"
+                  class="btn-paso-2 w-full text-left p-4 rounded-lg border border-orange-300 bg-orange-50/70 hover:border-rgm hover:bg-rgm-light transition flex items-center justify-between gap-3"
+                >
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded bg-rgm/15 text-rgm flex items-center justify-center shrink-0">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-rgm-dark text-base">Es una urgencia por lluvia</span>
+                      <span class="block text-xs text-gray-600">Entra agua o necesito revisión inmediata para evitar mayores daños.</span>
+                    </div>
+                  </div>
+                  <span class="text-rgm font-bold text-lg">→</span>
+                </button>
+
+                <button
+                  type="button"
+                  data-urgencia="Quiero presupuestar este mes"
+                  class="btn-paso-2 w-full text-left p-4 rounded-lg border border-gray-200 hover:border-rgm hover:bg-rgm-light transition flex items-center justify-between gap-3"
+                >
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded bg-gray-100 text-rgm-dark flex items-center justify-center shrink-0">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                      </svg>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-rgm-dark text-base">Quiero presupuestar este mes</span>
+                      <span class="block text-xs text-gray-600">Quiero coordinar una visita sin cargo para tener el precio exacto.</span>
+                    </div>
+                  </div>
+                  <span class="text-rgm font-bold text-lg">→</span>
+                </button>
+
+                <button
+                  type="button"
+                  data-urgencia="Solo estoy averiguando"
+                  class="btn-paso-2 w-full text-left p-4 rounded-lg border border-gray-200 hover:border-rgm hover:bg-rgm-light transition flex items-center justify-between gap-3"
+                >
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded bg-gray-100 text-rgm-dark flex items-center justify-center shrink-0">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-rgm-dark text-base">Solo estoy averiguando</span>
+                      <span class="block text-xs text-gray-600">Quiero tener una orientación para planificar más adelante.</span>
+                    </div>
+                  </div>
+                  <span class="text-rgm font-bold text-lg">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- PASO 3 -->
+            <div id="paso-3" class="hidden step-fade">
+              <div class="flex items-center justify-between mb-4">
+                <button
+                  type="button"
+                  id="volver-a-2"
+                  class="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-600 hover:text-rgm transition"
+                >
+                  ← Volver al paso anterior
+                </button>
+                <span class="text-xs font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded">
+                  Paso final
+                </span>
+              </div>
+
+              <h3 class="font-heading font-bold text-lg sm:text-xl text-rgm-dark mb-2">
+                3. Tus datos para pasarte el presupuesto
+              </h3>
+
+              <div class="border-l-4 border-rgm pl-3.5 py-1 mb-5 text-xs sm:text-sm text-gray-700">
+                <p><strong>Trabajo:</strong> <span id="resumen-problema">-</span></p>
+                <p class="mt-0.5"><strong>Propiedad y urgencia:</strong> <span id="resumen-urgencia">-</span></p>
+              </div>
+
+              <form id="form-presupuesto" class="space-y-4" novalidate>
+                <div>
+                  <label for="input-nombre" class="block text-sm font-bold text-rgm-dark mb-1">
+                    Tu Nombre <span class="text-rgm">*</span>
+                  </label>
+                  <input
+                    id="input-nombre"
+                    name="nombre"
+                    type="text"
+                    required
+                    autocomplete="name"
+                    placeholder="Ej: Carlos Rodríguez"
+                    class="w-full rounded-md border border-gray-300 px-4 py-3 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rgm focus:border-rgm"
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="input-barrio" class="block text-sm font-bold text-rgm-dark mb-1">
+                      Barrio o Localidad <span class="text-rgm">*</span>
+                    </label>
+                    <input
+                      id="input-barrio"
+                      name="barrio"
+                      type="text"
+                      required
+                      placeholder="Ej: Vicente López / San Isidro"
+                      class="w-full rounded-md border border-gray-300 px-4 py-3 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rgm focus:border-rgm"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="input-telefono" class="block text-sm font-bold text-rgm-dark mb-1">
+                      Tu Teléfono / WhatsApp <span class="text-rgm">*</span>
+                    </label>
+                    <input
+                      id="input-telefono"
+                      name="telefono"
+                      type="tel"
+                      required
+                      autocomplete="tel"
+                      placeholder="Ej: 11 2345-6789"
+                      class="w-full rounded-md border border-gray-300 px-4 py-3 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rgm focus:border-rgm"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="input-detalle" class="block text-sm font-semibold text-gray-700 mb-1">
+                    Detalle opcional (medidas aproximadas o qué notás en el techo)
+                  </label>
+                  <textarea
+                    id="input-detalle"
+                    name="detalle"
+                    rows="2"
+                    placeholder="Ej: Techo de chapa de unos 50m2, filtra contra la medianera en días de lluvia fuerte."
+                    class="w-full rounded-md border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rgm focus:border-rgm"
+                  ></textarea>
+                </div>
+
+                <p id="error-formulario" class="hidden text-sm font-semibold text-red-600 py-1 flex items-center gap-2">
+                  <span>⚠️</span> Por favor completá tu nombre, barrio y un teléfono para poder responderte.
+                </p>
+
+                <button
+                  type="submit"
+                  class="w-full inline-flex items-center justify-center gap-2.5 bg-rgm hover:bg-rgm-hover text-white font-bold text-base sm:text-lg px-6 py-4 rounded-md shadow-md transition"
+                >
+                  <span>Enviar Pedido de Presupuesto por WhatsApp</span>
+                  <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </button>
+
+                <div id="confirmacion-envio" class="hidden py-4 text-center border-t border-gray-200 mt-2">
+                  <p class="text-sm font-bold text-emerald-800 mb-1">¡Listo! Ya armamos tu consulta.</p>
+                  <p class="text-xs text-gray-600 mb-3">Si no se abrió WhatsApp automáticamente, tocá el botón de abajo:</p>
+                  <a
+                    id="link-respaldo-wa"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white font-bold text-sm px-5 py-2.5 rounded-md shadow-sm"
+                  >
+                    Abrir WhatsApp ahora
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 7. PREGUNTAS FRECUENTES (GARANTÍA Y FORMAS DE PAGO)                   -->
+    <!-- ===================================================================== -->
+    <section id="faq" class="py-16 sm:py-24 bg-white border-b border-gray-200">
+      <div id="preguntas-frecuentes" class="sr-only"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-rgm mb-2">Dudas habituales</p>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-rgm-dark tracking-tight">
+            Garantía escrita, materiales y formas de pago
+          </h2>
+          <p class="text-gray-600 mt-2 text-sm sm:text-base">
+            Cuentas claras antes de iniciar los trabajos para que no tengas dudas ni sorpresas.
+          </p>
+        </div>
+
+        <div class="space-y-4" id="faq-lista">
+          <details class="group bg-rgm-bgLight border border-gray-200 rounded-lg overflow-hidden open:border-rgm/40 transition" open>
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-heading font-bold text-base sm:text-lg text-rgm-dark">
+              <span>¿Cómo funciona la garantía escrita de <span data-dato="garantia">[X] años</span>?</span>
+              <span class="text-rgm font-extrabold text-xl transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-200/70 pt-3.5">
+              Al concluir la obra se entrega un comprobante firmado con el detalle de las tareas y una <strong>garantía escrita de <span data-dato="garantia">[X] años</span></strong> sobre estanqueidad y mano de obra. Si se detecta cualquier detalle dentro del sector resuelto, respondemos sin costo adicional.
+            </div>
+          </details>
+
+          <details class="group bg-rgm-bgLight border border-gray-200 rounded-lg overflow-hidden open:border-rgm/40 transition">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-heading font-bold text-base sm:text-lg text-rgm-dark">
+              <span>¿Se puede cotizar con materiales incluidos?</span>
+              <span class="text-rgm font-extrabold text-xl transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-200/70 pt-3.5">
+              Sí, ofrecemos ambas modalidades: presupuesto con <strong>materiales incluidos de primera línea</strong> (Ternium Cincalum, Sika, Weber Megaflex y zinguería a medida), o bien armado de la <strong>lista exacta de insumos</strong> para que los compre directo y abone solo la mano de obra.
+            </div>
+          </details>
+
+          <details class="group bg-rgm-bgLight border border-gray-200 rounded-lg overflow-hidden open:border-rgm/40 transition">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-heading font-bold text-base sm:text-lg text-rgm-dark">
+              <span>¿Cuáles son los medios de pago disponibles?</span>
+              <span class="text-rgm font-extrabold text-xl transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-200/70 pt-3.5">
+              Aceptamos <strong>efectivo, transferencia bancaria y Mercado Pago</strong>. En reparaciones menores se cancela al finalizar y verificar el trabajo. En techos completos se trabaja por etapas según avance de obra.
+            </div>
+          </details>
+
+          <details class="group bg-rgm-bgLight border border-gray-200 rounded-lg overflow-hidden open:border-rgm/40 transition">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-heading font-bold text-base sm:text-lg text-rgm-dark">
+              <span>¿Cuánto demoran en revisar el techo y pasar el presupuesto?</span>
+              <span class="text-rgm font-extrabold text-xl transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-200/70 pt-3.5">
+              Para urgencias en <strong data-dato="zona-larga">[TU ZONA / LOCALIDADES]</strong> coordinamos revisión en el día o dentro de las 24/48 hs. La inspección dentro del radio de trabajo es <strong>100% sin cargo y sin compromiso</strong>.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================= -->
+  <!-- 8. PIE DE PÁGINA ESTILO TECHOS RGM (FONDO OSCURO + REDES Y CONTACTO)    -->
+  <!-- ======================================================================= -->
+  <footer class="bg-rgm-dark text-gray-300 py-12 border-t border-gray-800 text-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pb-8 border-b border-gray-800">
+        <!-- Bloque principal con nombre y descripción -->
+        <div class="md:col-span-8">
+          <img
+            src="img/logo-techista-web-dark.png"
+            alt="Logotipo"
+            class="h-12 sm:h-14 w-auto object-contain mb-3"
+            width="276"
+            height="120"
+            loading="lazy"
+          />
+          <p class="font-heading font-extrabold text-xl text-white mb-2" data-dato="nombre-largo">
+            [NOMBRE DEL NEGOCIO / TU APELLIDO]
+          </p>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-xl mb-3">
+            Servicios integrales de reparación de techos, impermeabilizaciones con membrana y zinguería a medida en <span data-dato="zona-larga">[TU ZONA / LOCALIDADES]</span>. Estructuras diseñadas para perdurar con garantía escrita de <span data-dato="garantia">[X] años</span>.
+          </p>
+          <p class="text-gray-400 text-xs">
+            Horario: <span data-dato="horario">Lunes a Sábados de 7:30 a 19:30 hs (Atención de urgencias por lluvia)</span>
+          </p>
+        </div>
+
+        <!-- Bloque de contacto rápido estilo RGM -->
+        <div class="md:col-span-4 flex flex-col md:items-end">
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Contacto Directo</p>
+          <div class="flex flex-wrap gap-2">
+            <a
+              href="https://wa.me/5491100000000"
+              data-link="whatsapp-urgencia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 border border-gray-700 hover:border-rgm text-white text-xs px-3.5 py-2 rounded transition"
+            >
+              <svg class="w-3.5 h-3.5 fill-current text-whatsapp" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.95L0 24l6.33-1.66a11.86 11.86 0 005.72 1.46h.01c6.55 0 11.89-5.34 11.9-11.9 0-3.18-1.24-6.17-3.44-8.42zM12.06 21.8h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.85 9.85 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.83 9.83 0 012.89 6.99c0 5.45-4.44 9.9-9.89 9.9zm5.42-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a
+              href="tel:+5491100000000"
+              data-link="llamar"
+              class="inline-flex items-center gap-2 border border-gray-700 hover:border-rgm text-white text-xs px-3.5 py-2 rounded transition"
+            >
+              <span>Llamar al <strong data-dato="telefono-visible">11-0000-0000</strong></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <p>© 2026 <span data-dato="nombre-corto">[NOMBRE DEL NEGOCIO]</span> — Todos los derechos reservados.</p>
+        <p>Servicios profesionales en <span data-dato="zona-corta">[TU ZONA]</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
+  <!-- 9. BOTÓN FLOTANTE DE WHATSAPP (ESTILO TECHOS RGM)                       -->
+  <!-- ======================================================================= -->
+  <a
+    href="https://wa.me/5491100000000"
+    data-link="whatsapp-urgencia"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+    class="fixed right-5 bottom-5 w-14 h-14 rounded-full bg-whatsapp hover:bg-whatsapp-hover text-white flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all duration-200 z-50"
+  >
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.95L0 24l6.33-1.66a11.86 11.86 0 005.72 1.46h.01c6.55 0 11.89-5.34 11.9-11.9 0-3.18-1.24-6.17-3.44-8.42zM12.06 21.8h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.85 9.85 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.83 9.83 0 012.89 6.99c0 5.45-4.44 9.9-9.89 9.9zm5.42-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+    </svg>
+  </a>
+
+  <!-- ======================================================================= -->
+  <!-- CONFIGURACIÓN RÁPIDA DEL NEGOCIO Y LÓGICA INTERACTIVA                   -->
+  <!-- ======================================================================= -->
+  <script>
+    // =========================================================================
+    // DATOS PRINCIPALES DEL NEGOCIO
+    // =========================================================================
+    const DATOS_NEGOCIO = {
+      nombreCorto: '[NOMBRE DEL NEGOCIO]',
+      nombreLargo: '[NOMBRE DEL NEGOCIO / TU APELLIDO]',
+      zonaCorta: '[TU ZONA]',
+      zonaLarga: '[TU ZONA / LOCALIDADES]',
+      whatsappNumero: '5491100000000',
+      telefonoVisible: '11-0000-0000',
+      telefonoLlamada: '+5491100000000',
+      aniosGarantia: '[X] años',
+      horarioAtencion: 'Lunes a Sábados de 7:30 a 19:30 hs (Atención de urgencias por lluvia)'
+    };
+
+    // -------------------------------------------------------------------------
+    // 1. Inyección automática de DATOS_NEGOCIO
+    // -------------------------------------------------------------------------
+    (function inicializarDatosNegocio() {
+      const mapaTextos = {
+        'nombre-corto': DATOS_NEGOCIO.nombreCorto,
+        'nombre-largo': DATOS_NEGOCIO.nombreLargo,
+        'zona-corta': DATOS_NEGOCIO.zonaCorta,
+        'zona-larga': DATOS_NEGOCIO.zonaLarga,
+        'telefono-visible': DATOS_NEGOCIO.telefonoVisible,
+        'garantia': DATOS_NEGOCIO.aniosGarantia,
+        'horario': DATOS_NEGOCIO.horarioAtencion
+      };
+
+      Object.keys(mapaTextos).forEach(function (clave) {
+        document.querySelectorAll('[data-dato="' + clave + '"]').forEach(function (el) {
+          el.textContent = mapaTextos[clave];
+        });
+      });
+
+      // Actualizar enlaces de llamada directa
+      document.querySelectorAll('[data-link="llamar"]').forEach(function (el) {
+        el.setAttribute('href', 'tel:' + DATOS_NEGOCIO.telefonoLlamada);
+      });
+
+      // Actualizar enlaces directos de WhatsApp de urgencia
+      const textoUrgencia = encodeURIComponent(
+        'Hola ' + DATOS_NEGOCIO.nombreCorto + ', vi su página web y necesito consultar por un trabajo de techos en mi domicilio.'
+      );
+      document.querySelectorAll('[data-link="whatsapp-urgencia"]').forEach(function (el) {
+        el.setAttribute('href', 'https://wa.me/' + DATOS_NEGOCIO.whatsappNumero + '?text=' + textoUrgencia);
+      });
+
+      // Actualizar título de pestaña y Schema.org
+      document.title = 'Reparación de Techos e Impermeabilizaciones en ' + DATOS_NEGOCIO.zonaCorta + ' | ' + DATOS_NEGOCIO.nombreCorto;
+
+      const schemaEl = document.getElementById('schema-roofing');
+      if (schemaEl) {
+        try {
+          const schemaObj = JSON.parse(schemaEl.textContent);
+          schemaObj.name = DATOS_NEGOCIO.nombreLargo;
+          schemaObj.telephone = DATOS_NEGOCIO.telefonoLlamada;
+          if (schemaObj.areaServed) {
+            schemaObj.areaServed.name = DATOS_NEGOCIO.zonaLarga;
+          }
+          schemaObj.description =
+            'Servicios integrales de reparación de techos, impermeabilizaciones y zinguería a medida en ' +
+            DATOS_NEGOCIO.zonaLarga +
+            ' con ' +
+            DATOS_NEGOCIO.aniosGarantia +
+            ' de garantía escrita.';
+          schemaEl.textContent = JSON.stringify(schemaObj, null, 2);
+        } catch (err) {
+          // Si el JSON falla mantiene el original
+        }
+      }
+    })();
+
+    // -------------------------------------------------------------------------
+    // 2. Lógica del Calculador Multipaso (3 pasos)
+    // -------------------------------------------------------------------------
+    (function inicializarFormularioMultipaso() {
+      const estado = {
+        pasoActual: 1,
+        problema: '',
+        propiedad: 'Casa particular',
+        urgencia: ''
+      };
+
+      const paso1 = document.getElementById('paso-1');
+      const paso2 = document.getElementById('paso-2');
+      const paso3 = document.getElementById('paso-3');
+
+      const barraProgreso = document.getElementById('barra-progreso');
+      const indicadorTexto = document.getElementById('indicador-paso-texto');
+      const indicadorPorcentaje = document.getElementById('indicador-porcentaje');
+
+      const badgeEleccion1 = document.getElementById('badge-eleccion-1');
+      const resumenProblema = document.getElementById('resumen-problema');
+      const resumenUrgencia = document.getElementById('resumen-urgencia');
+
+      function irAPaso(numeroPaso) {
+        estado.pasoActual = numeroPaso;
+        paso1.classList.add('hidden');
+        paso2.classList.add('hidden');
+        paso3.classList.add('hidden');
+
+        if (numeroPaso === 1) {
+          paso1.classList.remove('hidden');
+          barraProgreso.style.width = '33%';
+          indicadorTexto.textContent = 'Paso 1 de 3: ¿Qué necesitás resolver?';
+          indicadorPorcentaje.textContent = '33%';
+        } else if (numeroPaso === 2) {
+          paso2.classList.remove('hidden');
+          barraProgreso.style.width = '66%';
+          indicadorTexto.textContent = 'Paso 2 de 3: Propiedad y urgencia';
+          indicadorPorcentaje.textContent = '66%';
+          badgeEleccion1.textContent = estado.problema;
+        } else if (numeroPaso === 3) {
+          paso3.classList.remove('hidden');
+          barraProgreso.style.width = '100%';
+          indicadorTexto.textContent = 'Paso 3 de 3: Tus datos de contacto';
+          indicadorPorcentaje.textContent = '100%';
+          resumenProblema.textContent = estado.problema;
+          resumenUrgencia.textContent = estado.propiedad + ' · ' + estado.urgencia;
+          setTimeout(function () {
+            const inputNombre = document.getElementById('input-nombre');
+            if (inputNombre) inputNombre.focus();
+          }, 120);
+        }
+      }
+
+      // Paso 1: Selección de problema
+      document.querySelectorAll('.btn-paso-1').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          estado.problema = btn.getAttribute('data-problema') || '';
+          irAPaso(2);
+        });
+      });
+
+      // Paso 2: Tipo de propiedad
+      const botonesPropiedad = document.querySelectorAll('.btn-propiedad');
+      botonesPropiedad.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          estado.propiedad = btn.getAttribute('data-propiedad') || 'Casa particular';
+          botonesPropiedad.forEach(function (otro) {
+            otro.className =
+              'btn-propiedad py-2.5 px-3 rounded-md border border-gray-300 bg-white text-gray-700 hover:border-rgm font-semibold text-xs sm:text-sm transition';
+          });
+          btn.className =
+            'btn-propiedad py-2.5 px-3 rounded-md border-2 border-rgm-dark bg-rgm-dark text-white font-semibold text-xs sm:text-sm transition';
+        });
+      });
+
+      // Paso 2: Urgencia
+      document.querySelectorAll('.btn-paso-2').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          estado.urgencia = btn.getAttribute('data-urgencia') || '';
+          irAPaso(3);
+        });
+      });
+
+      // Botones Volver
+      document.getElementById('volver-a-1').addEventListener('click', function () {
+        irAPaso(1);
+      });
+      document.getElementById('volver-a-2').addEventListener('click', function () {
+        irAPaso(2);
+      });
+
+      // Envío Paso 3 -> WhatsApp organizado
+      const form = document.getElementById('form-presupuesto');
+      const errorBox = document.getElementById('error-formulario');
+      const confirmacionBox = document.getElementById('confirmacion-envio');
+      const linkRespaldo = document.getElementById('link-respaldo-wa');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const nombre = document.getElementById('input-nombre').value.trim();
+        const barrio = document.getElementById('input-barrio').value.trim();
+        const telefono = document.getElementById('input-telefono').value.trim();
+        const detalle = document.getElementById('input-detalle').value.trim();
+
+        if (!nombre || !barrio || !telefono) {
+          errorBox.classList.remove('hidden');
+          return;
+        }
+        errorBox.classList.add('hidden');
+
+        const lineasMensaje = [
+          'Hola ' + DATOS_NEGOCIO.nombreCorto + ', te escribo desde la página web para pedir un presupuesto:',
+          '',
+          '• *Trabajo a realizar:* ' + estado.problema,
+          '• *Tipo de propiedad:* ' + estado.propiedad,
+          '• *Urgencia:* ' + estado.urgencia,
+          '• *Nombre:* ' + nombre,
+          '• *Barrio / Localidad:* ' + barrio,
+          '• *Teléfono:* ' + telefono
+        ];
+
+        if (detalle) {
+          lineasMensaje.push('• *Detalle adicional:* ' + detalle);
+        }
+
+        const urlWhatsApp =
+          'https://wa.me/' +
+          DATOS_NEGOCIO.whatsappNumero +
+          '?text=' +
+          encodeURIComponent(lineasMensaje.join('\n'));
+
+        linkRespaldo.setAttribute('href', urlWhatsApp);
+        confirmacionBox.classList.remove('hidden');
+
+        window.open(urlWhatsApp, '_blank', 'noopener,noreferrer');
+      });
+    })();
+
+    // -------------------------------------------------------------------------
+    // 3. Control de Menú Móvil Deslizable (Mobile-First Accessible Drawer)
+    // -------------------------------------------------------------------------
+    (function inicializarMenuMobile() {
+      const btnAbrir = document.getElementById('btn-abrir-menu');
+      const btnCerrar = document.getElementById('btn-cerrar-menu');
+      const drawer = document.getElementById('menu-lateral-mobile');
+      const backdrop = document.getElementById('backdrop-menu-mobile');
+      const enlaces = document.querySelectorAll('.enlace-menu-mobile');
+
+      if (!btnAbrir || !drawer || !backdrop) return;
+
+      function abrirMenu() {
+        drawer.classList.remove('translate-x-full');
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        backdrop.classList.add('opacity-100', 'pointer-events-auto');
+        btnAbrir.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('overflow-hidden');
+        if (btnCerrar) btnCerrar.focus();
+      }
+
+      function cerrarMenu() {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        btnAbrir.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('overflow-hidden');
+        btnAbrir.focus();
+      }
+
+      btnAbrir.addEventListener('click', abrirMenu);
+      if (btnCerrar) btnCerrar.addEventListener('click', cerrarMenu);
+      backdrop.addEventListener('click', cerrarMenu);
+
+      enlaces.forEach(function (enlace) {
+        enlace.addEventListener('click', function () {
+          cerrarMenu();
+        });
+      });
+
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && drawer.getAttribute('aria-hidden') === 'false') {
+          cerrarMenu();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" width="100%" height="100%">
+  <!-- Isotipo: Plegado Isométrico de Chapa Cincalum y Cumbrera -->
+  <g id="isotipo" transform="translate(10, 10)">
+    <!-- Ala izquierda de chapa (sombra / plano oscuro) -->
+    <path d="M30 6L6 20L6 44L30 30Z" fill="#14171C"/>
+    <!-- Ala derecha de chapa (luz / plano medio) -->
+    <path d="M30 6L54 20L54 44L30 30Z" fill="#334155"/>
+    <!-- Babeta central / cumbrera plegada en naranja cobre -->
+    <path d="M30 6L40 12L40 36L30 30L20 36L20 12Z" fill="#EE823A"/>
+    <!-- Relieve de nervio de chapa trapezoidal -->
+    <path d="M12 23.5L12 37.5L20 42L20 28Z" fill="#1E293B" opacity="0.6"/>
+    <path d="M48 23.5L48 37.5L40 42L40 28Z" fill="#64748B" opacity="0.6"/>
+    <!-- Punto de fijación / tornillo vulcanizado -->
+    <circle cx="30" cy="46" r="3" fill="#EE823A"/>
+    <line x1="30" y1="30" x2="30" y2="43" stroke="#EE823A" stroke-width="2" stroke-dasharray="2 2"/>
+  </g>
+
+  <!-- Tipografía de Marca -->
+  <g id="tipografia" transform="translate(82, 22)">
+    <text x="0" y="24" font-family="'Albert Sans', 'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" fill="#14171C" letter-spacing="-0.03em">
+      TECHISTA<tspan fill="#EE823A">.</tspan>PRO
+    </text>
+    <text x="0" y="42" font-family="'Work Sans', 'Roboto', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#64748B" letter-spacing="0.12em" text-transform="uppercase">
+      Techos · Zinguería · Membranas
+    </text>
+  </g>
+</svg>

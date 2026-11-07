@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" width="100%" height="100%">
+  <!-- Isotipo: Corte de Babeta Embutida y Desagüe Pluvial en Cinta Continua -->
+  <g id="isotipo" transform="translate(10, 10)">
+    <!-- Bloque de muro de mampostería estilizado (gris claro de fondo) -->
+    <rect x="4" y="8" width="14" height="44" rx="3" fill="#E2E8F0"/>
+    
+    <!-- Cinta continua de zinguería galvanizada plegada a medida -->
+    <!-- 1. Pestaña embutida en la pared -> 2. Bajada diagonal de protección -> 3. Gotero exterior -->
+    <path d="M11 14H24L48 38H56V48H44L18 22H11V14Z" fill="#14171C"/>
+    
+    <!-- Acento naranja: Chapa inferior protegida y caída libre de agua -->
+    <path d="M22 28L42 48H32L16 32V28H22Z" fill="#EE823A"/>
+    
+    <!-- Gota de agua que escurre sin entrar (desviada hacia la canaleta) -->
+    <path d="M50 20C50 20 54 25 54 27C54 29.2 52.2 31 50 31C47.8 31 46 29.2 46 27C46 25 50 20 50 20Z" fill="#3B82F6"/>
+  </g>
+
+  <!-- Tipografía de Marca -->
+  <g id="tipografia" transform="translate(82, 22)">
+    <text x="0" y="24" font-family="'Albert Sans', 'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" fill="#14171C" letter-spacing="-0.02em">
+      ZINGUERÍA<tspan fill="#EE823A"> MASTER</tspan>
+    </text>
+    <text x="0" y="42" font-family="'Work Sans', 'Roboto', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#64748B" letter-spacing="0.1em" text-transform="uppercase">
+      Sellado de Paredes · Cubiertas de Chapa
+    </text>
+  </g>
+</svg>

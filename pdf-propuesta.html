@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Propuesta de Sitio Web para Techista</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+    @page {
+      size: A4;
+      margin: 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      font-size: 10pt;
+      line-height: 1.4;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Albert Sans', sans-serif;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+
+    .page {
+      page-break-after: always;
+      page-break-inside: avoid;
+      height: 275mm;
+      max-height: 275mm;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    /* HEADER */
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-divider {
+      height: 28px;
+      width: 1px;
+      background: #cbd5e1;
+    }
+
+    .logo-text h3 {
+      font-size: 12pt;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.1;
+    }
+
+    .logo-text p {
+      font-size: 8pt;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .badge-presupuesto {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #c2410c;
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-align: right;
+      line-height: 1.25;
+    }
+
+    /* TYPOGRAPHY */
+    .hero-title {
+      font-size: 17pt;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 4px;
+      color: #0f172a;
+    }
+
+    .hero-subtitle {
+      font-size: 9.5pt;
+      color: #475569;
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+
+    .section-title {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+      border-left: 3px solid #ee823a;
+      padding-left: 8px;
+    }
+
+    /* FEATURE CARDS */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .feature-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 9px 11px;
+    }
+
+    .feature-card h4 {
+      font-size: 8.5pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+
+    .feature-card p {
+      font-size: 7.8pt;
+      color: #64748b;
+      line-height: 1.3;
+    }
+
+    /* PREVIEW CONTAINER */
+    .preview-container {
+      background: #0f172a;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: 2.1fr 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .preview-box {
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: #000;
+    }
+
+    .preview-box img {
+      width: 100%;
+      height: auto;
+      max-height: 160px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .preview-box.mobile-box img {
+      max-height: 160px;
+    }
+
+    .preview-label {
+      color: #cbd5e1;
+      font-size: 7.5pt;
+      font-weight: 600;
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    .sub-previews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .sub-preview-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px;
+      overflow: hidden;
+    }
+
+    .sub-preview-card img {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 5px;
+      border: 1px solid #cbd5e1;
+      margin-bottom: 5px;
+    }
+
+    .sub-preview-card h4 {
+      font-size: 8.5pt;
+      font-weight: 800;
+      margin-bottom: 1px;
+    }
+
+    .sub-preview-card p {
+      font-size: 7.5pt;
+      color: #64748b;
+      line-height: 1.25;
+    }
+
+    /* CHECKLIST */
+    .checklist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-bottom: 12px;
+    }
+
+    .check-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid #10b981;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    .check-item h4 {
+      font-size: 8.5pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+
+    .check-item p {
+      font-size: 7.8pt;
+      color: #475569;
+      line-height: 1.3;
+    }
+
+    .check-item .ejemplo {
+      font-size: 7.2pt;
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 3px 5px;
+      border-radius: 4px;
+      margin-top: 3px;
+      display: block;
+    }
+
+    /* PRICING TABLE */
+    .pricing-box {
+      background: #fff7ed;
+      border: 1.5px solid #fdba74;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+    }
+
+    .pricing-table th {
+      text-align: left;
+      padding: 6px 8px;
+      border-bottom: 1.5px solid #fed7aa;
+      color: #9a3412;
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pricing-table td {
+      padding: 7px 8px;
+      border-bottom: 1px solid #ffedd5;
+      color: #334155;
+    }
+
+    .pricing-table td.monto {
+      text-align: right;
+      font-weight: 700;
+      color: #0f172a;
+      white-space: nowrap;
+    }
+
+    .pricing-table tr.total-row td {
+      border-bottom: none;
+      padding-top: 9px;
+      font-size: 10.5pt;
+      font-weight: 900;
+      color: #9a3412;
+    }
+
+    .pago-condiciones {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-top: 8px;
+    }
+
+    .pago-condicion h5 {
+      font-size: 8pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+
+    .pago-condicion p {
+      font-size: 7.5pt;
+      color: #64748b;
+      line-height: 1.25;
+    }
+
+    /* FOOTER */
+    .footer-bar {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7.5pt;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================================================= -->
+  <!-- PÁGINA 1: PRESENTACIÓN Y MUESTRAS VISUALES                              -->
+  <!-- ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="logo-container">
+          <img src="public/img/logo-techista-web-light.png" alt="Logo" class="logo-img">
+          <div class="logo-divider"></div>
+          <div class="logo-text">
+            <h3>Propuesta de Sitio Web</h3>
+            <p>Especializada para el oficio de Techista y Zinguería</p>
+          </div>
+        </div>
+        <div class="badge-presupuesto">
+          Servicio Integral<br>
+          <strong>Llave en Mano</strong>
+        </div>
+      </div>
+
+      <h1 class="hero-title">Tu Nueva Web de Techos y Zinguería</h1>
+      <p class="hero-subtitle">
+        Diseñada especialmente para transformar urgencias por lluvias y proyectos de techos en consultas directas y clasificadas a tu WhatsApp.
+      </p>
+
+      <!-- 3 Puntos Clave -->
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>📱 100% Mobile-First</h4>
+          <p>El 85% de los clientes te buscan desde el celular con una gotera o techos picados. La web abre al instante en 4G/5G.</p>
+        </div>
+        <div class="feature-card">
+          <h4>🧮 Presupuestos en 3 Pasos</h4>
+          <p>El cliente elige qué problema tiene, su propiedad y localidad, armándote un mensaje ordenado y limpio para responder rápido.</p>
+        </div>
+        <div class="feature-card">
+          <h4>🛡️ Confianza y Garantía</h4>
+          <p>Muestra tus fotos reales de antes y después, tus años de garantía escrita y los materiales oficiales que utilizás (Ternium, Sika).</p>
+        </div>
+      </div>
+
+      <div class="section-title">Muestra en Vivo de la Web Ya Diseñada</div>
+
+      <!-- Preview Principal (Desktop + Mobile) -->
+      <div class="preview-container">
+        <div>
+          <div class="preview-box">
+            <img src="public/img/preview-desktop.png" alt="Vista Escritorio">
+          </div>
+          <div class="preview-label">Vista en Computadora / Tablet (Encabezado con logo + Hero profesional)</div>
+        </div>
+        <div>
+          <div class="preview-box mobile-box">
+            <img src="public/img/preview-mobile.png" alt="Vista Celular">
+          </div>
+          <div class="preview-label">Vista Celular (Botón directo y menú táctil)</div>
+        </div>
+      </div>
+
+      <!-- Sub Previews (Obras y Calculador) -->
+      <div class="sub-previews">
+        <div class="sub-preview-card">
+          <img src="public/img/preview-calculador.png" alt="Calculador de Presupuesto">
+          <h4>Calculador de Presupuesto Guiado</h4>
+          <p>Filtra el tipo de trabajo (chapa, losa, zinguería) y envía el pedido listo a tu WhatsApp.</p>
+        </div>
+        <div class="sub-preview-card">
+          <img src="public/img/preview-obras.png" alt="Obras Reales Antes y Después">
+          <h4>Galería "Antes y Después"</h4>
+          <p>Demuestra el oficio con fotos comparativas que justifican tu valor y generan confianza.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Página 1 de 2 — Propuesta de Desarrollo y Personalización Web</span>
+      <span>Noviembre 2026</span>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- PÁGINA 2: DATOS NECESARIOS Y PRESUPUESTO ECONÓMICO                      -->
+  <!-- ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="logo-container">
+          <img src="public/img/logo-techista-web-light.png" alt="Logo" class="logo-img">
+          <div class="logo-divider"></div>
+          <div class="logo-text">
+            <h3>Puesta en Marcha</h3>
+            <p>Datos a coordinar y detalle de costos transparentes</p>
+          </div>
+        </div>
+        <div class="badge-presupuesto">
+          Puesta Online<br>
+          <strong>3 a 5 Días</strong>
+        </div>
+      </div>
+
+      <div class="section-title">1. Datos que necesitamos (Me los mandás por audio o texto)</div>
+      <div class="checklist">
+        <div class="check-item">
+          <h4>1. Nombre y Celular</h4>
+          <p>Cómo querés que figure el negocio y el número exacto donde recibirás los presupuestos y llamadas.</p>
+          <span class="ejemplo">Ej: "Techos Albarracín" · Cel: 11-5421-9988</span>
+        </div>
+        <div class="check-item">
+          <h4>2. Zona de Cobertura</h4>
+          <p>Barrios o partidos donde trabajás habitualmente y si la visita técnica de diagnóstico es sin cargo.</p>
+          <span class="ejemplo">Ej: San Isidro, San Martín, Vicente López y Tigre</span>
+        </div>
+        <div class="check-item">
+          <h4>3. Garantía y Materiales</h4>
+          <p>Años de garantía escrita que das en cubiertas nuevas y marcas de materiales oficiales que te gusta usar.</p>
+          <span class="ejemplo">Ej: 10 años · Ternium Cincalum, Sika y Megaflex</span>
+        </div>
+        <div class="check-item">
+          <h4>4. Fotos de Obras (4 a 6 fotos)</h4>
+          <p>Fotos que tengas en la galería del celular de techos o zinguerías hechas (chapa, losa con membrana o canaleta).</p>
+          <span class="ejemplo">Se acomodan y optimizan sin costo adicional</span>
+        </div>
+      </div>
+
+      <div class="section-title">2. Detalle Económico Transparente</div>
+
+      <div class="pricing-box">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th>Descripción</th>
+              <th style="text-align: right;">Inversión</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Dominio Web Propio</strong></td>
+              <td>Registro oficial anual en NIC Argentina (ej: <code>tunombre.com.ar</code> a tu nombre).</td>
+              <td class="monto">$15.000 / año</td>
+            </tr>
+            <tr>
+              <td><strong>Servidor Cloud + Certificado SSL</strong></td>
+              <td>Alojamiento de alta velocidad en la nube + candado verde de seguridad HTTPS obligatorio.</td>
+              <td class="monto">$25.000 / año</td>
+            </tr>
+            <tr>
+              <td><strong>Diseño, Maquetación y Código</strong></td>
+              <td>Estructura completa adaptada a celular, conexión a WhatsApp, favicon, textos y fotos cargadas.</td>
+              <td class="monto">$60.000</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="2">TOTAL LLAVE EN MANO (Primer año completo con servidor y dominio incluido):</td>
+              <td class="monto" style="font-size: 11.5pt;">$100.000 ARS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Condiciones de pago -->
+      <div class="pago-condiciones">
+        <div class="pago-condicion">
+          <h5>💳 Forma de Pago en 2 Veces</h5>
+          <p><strong>$50.000</strong> para dar de alta el dominio y comenzar la carga, y <strong>$50.000</strong> contra entrega una vez que la veas funcionando en tu celular.</p>
+        </div>
+        <div class="pago-condicion">
+          <h5>⏱️ Plazo de Entrega</h5>
+          <p><strong>3 a 5 días hábiles</strong> a partir del envío de las fotos y datos básicos de contacto.</p>
+        </div>
+        <div class="pago-condicion">
+          <h5>🔒 Renovación Anual Mínima</h5>
+          <p>El costo de mantenimiento y servidor para el segundo año es solo el valor de costo de renovación (aprox. $40.000 anuales dentro de 12 meses).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Página 2 de 2 — Propuesta de Desarrollo y Personalización Web</span>
+      <span>Sitio 100% de propiedad del cliente</span>
+    </div>
+  </div>
+
+</body>
+</html>

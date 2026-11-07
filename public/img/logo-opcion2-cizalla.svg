@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" width="100%" height="100%">
+  <!-- Isotipo: Monograma T de Techista / Vértice de Techo y Pendiente -->
+  <g id="isotipo" transform="translate(10, 10)">
+    <!-- Base de fondo técnico -->
+    <rect x="0" y="0" width="60" height="60" rx="12" fill="#14171C"/>
+    <!-- Viga / Alero horizontal inclinado (travesaño de la T) -->
+    <path d="M10 20L50 14L48 24L10 28Z" fill="#EE823A"/>
+    <!-- Columna / Caída vertical angular (cuerpo de la T / desagüe de zinguería) -->
+    <path d="M26 23L34 22L31 50L24 50Z" fill="#FFFFFF"/>
+    <!-- Corte angular inferior de 45° característico de las babetas de zinguería -->
+    <path d="M37 25L46 36L41 38L34 27Z" fill="#94A3B8"/>
+  </g>
+
+  <!-- Tipografía de Marca -->
+  <g id="tipografia" transform="translate(82, 22)">
+    <text x="0" y="24" font-family="'Albert Sans', 'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" fill="#14171C" letter-spacing="-0.02em">
+      TECHOS<tspan fill="#EE823A"> &amp; </tspan>ZINGUERÍA
+    </text>
+    <text x="0" y="42" font-family="'Work Sans', 'Roboto', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#64748B" letter-spacing="0.1em" text-transform="uppercase">
+      Estructuras &amp; Estanqueidad Definitiva
+    </text>
+  </g>
+</svg>
